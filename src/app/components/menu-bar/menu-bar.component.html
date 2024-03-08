@@ -2,8 +2,27 @@
 	<a class="menu-logo" href="#"
 		><img src="../../../assets/skc_logo.png" alt=""
 	/></a>
-	<button (click)="toggleMenu()">Toggle Menu</button>
+	<button (click)="toggleMenu()">
+		<fa-icon [icon]="['fas', 'bars']" size="xl"></fa-icon>
+	</button>
 
+	<ul [class.open]="isOpen" class="nav-list">
+		<li class="nav-item">
+			<a class="nav-link" href="#home">Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#about">Sobre mim</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#service">Skills</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#portfolio">Projetos</a>
+		</li>
+	</ul>
+</nav>
+
+<div class="mobile-menu">
 	<ul [class.open]="isOpen" class="nav-list">
 		<li class="nav-item">
 			<a class="nav-link" href="#home">Home</a>
@@ -21,4 +40,4 @@
 			<a class="nav-link" href="#blog">Blog</a>
 		</li>
 	</ul>
-</nav>
+</div>
