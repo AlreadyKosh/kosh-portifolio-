@@ -21,7 +21,7 @@ import {
 	faNode,
 } from '@fortawesome/free-brands-svg-icons';
 
-import { faBars, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faLink } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
 	selector: 'app-root',
@@ -38,7 +38,6 @@ export class AppComponent {
 			faInstagram,
 			faTwitter,
 			faGithub,
-			faCoffee,
 			faBars,
 			faAngular,
 			faReact,
@@ -47,7 +46,8 @@ export class AppComponent {
 			faSass,
 			faBootstrap,
 			faJs,
-			faNode
+			faNode,
+			faLink
 		);
 	}
 }

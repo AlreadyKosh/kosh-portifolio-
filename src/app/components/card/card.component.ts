@@ -11,9 +11,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 	styleUrl: './card.component.scss',
 })
 export class CardComponent {
-	@Input() iconType: boolean = true;
-	@Input() iconName: any = '';
-	@Input() iconLink: string = '';
-	@Input() alt: string = '';
-	@Input() label: string = '';
+	@Input() iconType: boolean = true; // Escolher o tipo do Icone (True = FontAwesome, False = Link da Imagem)
+	@Input() iconName: any = ''; //Nome do icone (FontAwesome)
+	@Input() iconLink: string = ''; //Link para os Icones
+	@Input() alt: string = ''; // Texto alternativo para as imagens
+	@Input() label: string = ''; // Escreve o Texto embaixo do Icone
 }

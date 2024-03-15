@@ -1,0 +1,42 @@
+@import "../../styles/break-points.scss";
+@import "../../styles/variables.scss";
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid $primary;
+	border-radius: 30px;
+
+	.card-top {
+		display: flex;
+		justify-content: center;
+		margin: 16px 0 0 0;
+		text-align: center;
+		.title {
+			font-size: 20px;
+			span {
+				color: $primary;
+			}
+		}
+	}
+
+	.card-body {
+		padding: 20px;
+		text-align: center;
+
+		img {
+			width: 90%;
+			border-radius: 20px;
+		}
+		.description {
+			margin-top: 10px;
+		}
+	}
+
+	.card-bottom {
+		display: flex;
+		margin-bottom: 16px;
+	}
+}

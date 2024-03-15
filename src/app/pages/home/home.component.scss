@@ -160,3 +160,31 @@
 		}
 	}
 }
+
+.section-projects {
+	margin-top: 16px;
+	padding: 5rem 0;
+
+	.container {
+		margin-top: 48px;
+		padding: 0 15px;
+
+		.title {
+			color: $white;
+			font-size: 25px;
+			margin-bottom: 24px;
+			text-align: center;
+		}
+
+		.description {
+			text-align: center;
+			margin-bottom: 48px;
+		}
+
+		.project-list {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+	}
+}

@@ -28,16 +28,19 @@
 
 			<div class="socials">
 				<app-social-button
+					iconType="fab"
 					iconName="instagram"
 					link="https://www.instagram.com/eusoucarreira/"
 				></app-social-button>
 
 				<app-social-button
+					iconType="fab"
 					iconName="twitter"
 					link="https://twitter.com/eusoucarreira"
 				></app-social-button>
 
 				<app-social-button
+					iconType="fab"
 					iconName="github"
 					link="https://github.com/AlreadyKosh"
 				></app-social-button>
@@ -50,7 +53,7 @@
 </header>
 
 <!--Seção Sobre -->
-<section class="section-about">
+<section id="about" class="section-about">
 	<div class="container">
 		<div class="about">
 			<img src="assets/img/perfildog.jpg" alt="" class="img-about" />
@@ -144,6 +147,32 @@
 		</div>
 	</div>
 </section>
+
 <!--Projetos -->
+<section id="projetos" class="section-projects">
+	<div class="container text-center">
+		<h6 class="title">Projetos</h6>
+		<p class="description mb-5 pb-4">
+			Aqui contém os meus melhores projetos desenvolvidos por mim que
+			demonstram minhas hard skills que foram desenvolvidas através das
+			minhas capacitações já citadas. Meus projetos vão desde projetos
+			fullstacks, onde desenvolvi o front-end, back-end e o banco de
+			dados, até projetos mais simples como landing pages de empresas
+			ficticias.
+		</p>
+
+		<div class="project-list">
+			<app-projeto-card
+				imgLink="../../../assets/img/Pokedex.png"
+				alt="Imagem do Projeto Pokedex"
+				label="Pokedex"
+				description="Landing page simulating a Pokédex from the Pokemon anime, which is a
+			virtual encyclopedia that contains all Pokémon species and their
+			appropriate information."
+			></app-projeto-card>
+			<app-projeto-card label="To Do List"></app-projeto-card>
+		</div>
+	</div>
+</section>
 
 <!--Footer -->

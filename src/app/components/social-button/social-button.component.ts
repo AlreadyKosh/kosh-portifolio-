@@ -10,5 +10,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 })
 export class SocialButtonComponent {
 	@Input() iconName: any = '';
+	@Input() iconType: any = '';
 	@Input() link: string = '';
 }
