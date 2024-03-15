@@ -1,0 +1,29 @@
+@import "../../styles/break-points.scss";
+@import "../../styles/variables.scss";
+
+.card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid $primary;
+	border-radius: 20px;
+
+	.card-body {
+		padding: 20px 0;
+		text-align: center;
+
+		.icon {
+			font-size: 40px;
+			margin-bottom: 18px;
+			color: $primary;
+		}
+
+		.iconImg {
+			height: 50px;
+		}
+
+		.label {
+			margin-top: 10px;
+		}
+	}
+}

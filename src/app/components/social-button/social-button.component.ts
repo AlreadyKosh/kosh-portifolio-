@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { IconName } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
 	selector: 'app-social-button',

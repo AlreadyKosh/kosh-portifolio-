@@ -1,16 +1,29 @@
+<!--Barra de Menu -->
 <app-menu-bar></app-menu-bar>
+
+<!--Header -->
 <header class="header" id="home">
 	<div class="container">
 		<div class="infos">
 			<h6 class="subtitle">Olá, eu me chamo</h6>
-			<h6 class="title">Douglas Carreira</h6>
+			<h6 class="title">
+				<span>{{ "{" }}</span
+				>Douglas Carreira<span>{{ "}" }}</span>
+			</h6>
 			<p class="sub-info">
-				E sou um desenvolvedor fullstack, seja bem-vindo ao meu
-				portifolio!!
+				E sou um desenvolvedor fullstack a procura de uma oportunidade,
+				seja bem-vindo ao meu portifolio!!
 			</p>
 			<div class="buttons">
-				<app-button></app-button>
-				<app-button></app-button>
+				<app-button
+					label="CONTATO"
+					link="mailto:doug.carreira1409@gmail.com"
+				></app-button>
+				<app-button
+					[outline]="true"
+					label="VER PROJETOS"
+					link="https://www.instagram.com/eusoucarreira/"
+				></app-button>
 			</div>
 
 			<div class="socials">
@@ -21,33 +34,116 @@
 
 				<app-social-button
 					iconName="twitter"
-					link="https://www.instagram.com/eusoucarreira/"
+					link="https://twitter.com/eusoucarreira"
 				></app-social-button>
 
 				<app-social-button
 					iconName="github"
-					link="https://www.instagram.com/eusoucarreira/"
+					link="https://github.com/AlreadyKosh"
 				></app-social-button>
 			</div>
 		</div>
-		<div class="img-holder">
-			<img src="assets/imgs/man.svg" alt="" />
-		</div>
-	</div>
-
-	<!-- Header-widget -->
-	<div class="widget">
-		<div class="widget-item">
-			<h2>2</h2>
-			<p>Livros Publicados</p>
-		</div>
-		<div class="widget-item">
-			<h2>21.5 k</h2>
-			<p>Seguidores no Twitter</p>
-		</div>
-		<div class="widget-item">
-			<h2>2.5 k</h2>
-			<p>Seguidores na Twitch</p>
+		<div class="img-header">
+			<img src="assets/img/perfildog.jpg" alt="Foto Ilustrativa" />
 		</div>
 	</div>
 </header>
+
+<!--Seção Sobre -->
+<section class="section-about">
+	<div class="container">
+		<div class="about">
+			<img src="assets/img/perfildog.jpg" alt="" class="img-about" />
+
+			<div class="pl-md-4 col-md-9">
+				<h6 class="title">
+					<span>{{ "{" }}</span
+					>Douglas Carreira<span>{{ "}" }}</span>
+				</h6>
+				<p class="subtitle">Desenvolvedor FullStack</p>
+				<p class="body-text">
+					Olá, sou um desenvolvedor FullStack apaixonado por
+					tecnologia e inovação. Sou gradudado em Engenharia da
+					Computação pela faculdade ESAMC Santos e tambem sou técnico
+					em programação de jogos digitais pela ETEC Aristóteles
+					Ferreira, onde lá obtive o meu primeiro contato com a area
+					de desenvolvimento. Com uma ampla experiência em diversas
+					áreas do desenvolvimento de software, sou versátil e capaz
+					de criar soluções de ponta a ponta. Minhas habilidades
+					incluem o desenvolvimento em C# .NET, TypeScript, JavaScript
+					e Ruby, assim como o uso eficaz de bibliotecas e frameworks
+					como Angular, React, React Native, Ruby on Rails e
+					Bootstrap.
+				</p>
+				<p class="body-text">
+					Ao longo da minha jornada, participei de dois bootcamps
+					oferecidos pela Digital Innovation One, onde me aprofundei
+					em tecnologias essenciais para o desenvolvimento web e de
+					aplicativos, onde obtive certificados em desenvolvimento
+					utilizando .NET e Angular, o que me proporcionou
+					conhecimentos valiosos para criar soluções robustas e
+					escaláveis. Busco constantemente novos desafios e
+					oportunidades para expandir meus conhecimentos e
+					habilidades. Estou sempre aberto a colaborações e projetos
+					inovadores que possam impulsionar meu crescimento
+					profissional e contribuir para o avanço da tecnologia. Se
+					você está procurando um desenvolvedor comprometido, criativo
+					e sempre disposto a aprender, estou aqui para ajudar. Vamos
+					criar juntos soluções incríveis e impactantes!
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--Hard Skills -->
+<section id="skills" class="section-skills">
+	<div class="container">
+		<h6 class="section-title">Skills</h6>
+		<div class="frontend">
+			<h6 class="skills-title">
+				<span>{{ "{ " }}</span
+				>Front-End<span>{{ " }" }}</span>
+			</h6>
+			<div class="cards">
+				<app-card iconName="angular" label="Angular"></app-card>
+				<app-card iconName="react" label="React"></app-card>
+				<app-card iconName="html5" label="HTML"></app-card>
+				<app-card iconName="css3-alt" label="CSS"></app-card>
+				<app-card iconName="sass" label="Sass"></app-card>
+				<app-card iconName="bootstrap" label="Bootstrap"></app-card>
+			</div>
+		</div>
+		<div class="Back-End">
+			<h6 class="skills-title">
+				<span>{{ "{ " }}</span
+				>Back-End<span>{{ " }" }}</span>
+			</h6>
+			<div class="cards">
+				<app-card iconName="js" label="Javascript"></app-card>
+				<app-card
+					[iconType]="false"
+					iconLink="../../assets/icon/icon-typescript.svg"
+					label="Typescript"
+					alt="Icone da Linguagem Typescript"
+				></app-card>
+				<app-card iconName="node" label="Node"></app-card>
+				<app-card
+					iconLink="../../assets/icon/icon-c-sharp-logo.svg"
+					label="C#"
+					alt="Icone da Linguagem C#"
+					[iconType]="false"
+				></app-card>
+				<app-card
+					iconLink="../../assets/icon/icon-ruby-on-rails-64.svg"
+					label="Ruby on Rails"
+					alt="Icone do framework Ruby on Rails"
+					[iconType]="false"
+				></app-card>
+			</div>
+		</div>
+	</div>
+</section>
+<!--Projetos -->
+
+<!--Footer -->

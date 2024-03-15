@@ -1,1 +1,15 @@
-<p>card works!</p>
+<div class="card">
+	<div class="card-body">
+		<fa-icon
+			[icon]="['fab', iconName]"
+			size="lg"
+			class="icon"
+			*ngIf="iconType; else image"
+		></fa-icon>
+		<ng-template #image>
+			<img [src]="iconLink" [alt]="alt" class="iconImg" />
+		</ng-template>
+
+		<h5 class="label">{{ label }}</h5>
+	</div>
+</div>

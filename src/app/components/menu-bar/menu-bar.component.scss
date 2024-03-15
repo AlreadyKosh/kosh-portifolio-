@@ -8,10 +8,12 @@
 	height: 8vh;
 	width: 100%;
 	justify-content: space-around;
+	background-color: #161616;
 
 	button {
 		background-color: transparent;
-		border: none;
+		border: 2px solid #fff;
+		padding: 4px 8px;
 		color: #fff;
 	}
 

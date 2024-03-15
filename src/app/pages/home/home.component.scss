@@ -1,9 +1,9 @@
-$white: #fff;
+@import "../../styles/break-points.scss";
+@import "../../styles/variables.scss";
 
 .header {
 	height: 94vh;
 	min-height: 650px;
-	border-bottom: 1px solid yellow;
 
 	.container {
 		height: 100%;
@@ -17,7 +17,6 @@ $white: #fff;
 				margin-bottom: 0;
 				font-size: 25px;
 				font-weight: 500;
-				opacity: 0.8;
 			}
 
 			.title {
@@ -25,6 +24,10 @@ $white: #fff;
 				margin-bottom: 0px;
 				font-size: 74px;
 				font-weight: bold;
+
+				span {
+					color: $primary;
+				}
 			}
 
 			.sub-info {
@@ -45,78 +48,115 @@ $white: #fff;
 			}
 		}
 
-		.img-holder {
-			height: 100%;
-			align-self: flex-end;
-			flex-grow: 1;
+		.img-header {
+			display: none;
+		}
+
+		@include desktop {
+			.img-header {
+				height: 100%;
+				align-self: flex-end;
+				flex-grow: 1;
+				display: flex;
+				align-items: flex-end;
+				padding-left: 0px;
+
+				img {
+					width: 100%;
+					max-width: 620px;
+
+					margin-left: auto;
+					margin-right: -2rem;
+				}
+			}
+		}
+	}
+}
+
+.section-about {
+	margin-top: 16px;
+	padding: 5rem 0;
+
+	.container {
+		margin-top: 48px;
+		padding: 0 15px;
+
+		.about {
 			display: flex;
-			align-items: flex-end;
-			padding-left: 0px;
-
-			img {
-				width: 100%;
-				max-width: 620px;
-
-				margin-left: auto;
-				margin-right: -2rem;
-			}
-		}
-	}
-
-	// header widget
-	.widget {
-		position: relative;
-		max-width: 650px;
-		width: 95%;
-		margin: 0 auto;
-		border-radius: 50px;
-		display: flex;
-		border: 1px solid yellow;
-		padding: 20px 0;
-		margin-top: -50px;
-		z-index: 999;
-		background: #fff;
-		box-shadow: 0 0 30px rgba(gray, 0.4);
-
-		.widget-item {
-			flex-grow: 1;
-			flex-basis: 0;
+			flex-direction: column;
+			color: $white;
 			text-align: center;
-			border-right: 1px solid yellow;
 
-			&:last-child {
-				border-right: 0;
+			.img-about {
+				vertical-align: middle;
+				margin-bottom: 1.5rem !important;
+				padding: 0.25rem;
+				background-color: $primary;
+				border: 1px solid $primary;
+				border-radius: 0.25rem;
+				max-width: 100%;
+				height: auto;
+			}
+			.title {
+				font-size: 25px;
+				color: $white;
+
+				span {
+					color: $primary;
+				}
 			}
 
-			h2,
-			p {
-				margin: 0;
+			.subtitle {
+				font-size: 15px;
+				font-weight: 500;
 			}
 
-			p {
-				opacity: 0.7;
-				font-size: 14px;
+			.body-text {
+				font-size: 15px;
+				font-weight: 400;
+				margin-bottom: 12px;
+			}
+
+			@include desktop {
+				flex-direction: row;
 			}
 		}
 	}
+}
 
-	// header title
-	&-title {
-		font-size: 2.4rem;
-		font-weight: bold;
-		opacity: 0.8;
-	}
+.section-skills {
+	margin-top: 16px;
+	padding: 5rem 0;
 
-	// header mini
-	&-mini {
-		min-height: 24rem;
-		height: 24rem;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		padding: 1rem;
-		background: lighten(yellow, 20%);
+	.container {
+		margin-top: 48px;
+		padding: 0 15px;
+
+		.section-title {
+			color: $white;
+			font-size: 25px;
+			margin-bottom: 24px;
+			text-align: center;
+		}
+		.skills-title {
+			color: $white;
+			font-size: 20px;
+			margin-bottom: 15px;
+			text-align: center;
+
+			span {
+				color: $primary;
+			}
+		}
+
+		.frontend {
+			margin-bottom: 25px;
+		}
+
+		.cards {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 10px;
+		}
 	}
 }
