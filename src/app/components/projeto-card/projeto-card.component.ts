@@ -1,13 +1,14 @@
 import { Component, Input } from '@angular/core';
-import { SocialButtonComponent } from '../social-button/social-button.component';
 import { CommonModule } from '@angular/common';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SocialButtonComponent } from '../social-button/social-button.component';
+import { CardComponent } from '../card/card.component';
 
 @Component({
 	selector: 'app-projeto-card',
 	standalone: true,
-	imports: [SocialButtonComponent, FontAwesomeModule],
+	imports: [SocialButtonComponent, FontAwesomeModule, CardComponent],
 	templateUrl: './projeto-card.component.html',
 	styleUrl: './projeto-card.component.scss',
 })

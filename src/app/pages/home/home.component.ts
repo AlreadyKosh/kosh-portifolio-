@@ -5,6 +5,7 @@ import { SocialButtonComponent } from '../../components/social-button/social-but
 import { ButtonComponent } from '../../components/button/button.component';
 import { CardComponent } from '../../components/card/card.component';
 import { ProjetoCardComponent } from '../../components/projeto-card/projeto-card.component';
+import { CarouselComponent } from '../../components/carousel/carousel.component';
 
 @Component({
 	selector: 'app-home',
@@ -15,6 +16,7 @@ import { ProjetoCardComponent } from '../../components/projeto-card/projeto-card
 		ButtonComponent,
 		CardComponent,
 		ProjetoCardComponent,
+		CarouselComponent,
 	],
 	templateUrl: './home.component.html',
 	styleUrl: './home.component.scss',

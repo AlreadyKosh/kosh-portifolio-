@@ -1,0 +1,22 @@
+<div class="slider" #slider>
+	<div
+		class="carousel-container"
+		[style.transform]="'translateX(' + slideOffset + 'px)'"
+	>
+		<div
+			class="item"
+			*ngFor="let data of cardData; let i = index"
+			[ngClass]="{ active: i === activeIndex }"
+		>
+			<app-projeto-card
+				[imgLink]="data.imgLink"
+				[alt]="data.alt"
+				[label]="data.label"
+				[description]="data.description"
+			>
+			</app-projeto-card>
+		</div>
+	</div>
+	<button id="prev" (click)="prevClick()">Prev</button>
+	<button id="next" (click)="nextClick()">Next</button>
+</div>
