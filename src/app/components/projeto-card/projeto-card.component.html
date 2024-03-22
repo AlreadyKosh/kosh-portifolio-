@@ -1,26 +1,91 @@
-<div class="card">
-	<div class="card-top">
-		<h5 class="title">
-			<span>{{ "{ " }}</span
-			>{{ label }}<span>{{ " }" }}</span>
-		</h5>
+<div class="card" [ngClass]="{ on: showBack, off: !showBack }">
+	<div class="card-front" [ngClass]="{ off: showBack, on: !showBack }">
+		<div class="card-top">
+			<h5 class="title">
+				<span>{{ "{ " }}</span
+				>{{ label }}<span>{{ " }" }}</span>
+			</h5>
+		</div>
+		<div class="card-body">
+			<img src="{{ imgLink }}" alt="{{ alt }}" />
+			<p class="description">
+				{{ description }}
+			</p>
+		</div>
+		<div class="card-bottom">
+			<div class="card-icons">
+				<fa-icon
+					[icon]="['fab', 'html5']"
+					size="xl"
+					class="icon"
+				></fa-icon>
+				<fa-icon
+					[icon]="['fab', 'css3-alt']"
+					size="xl"
+					class="icon"
+				></fa-icon>
+				<fa-icon
+					[icon]="['fab', 'js']"
+					size="xl"
+					class="icon"
+				></fa-icon>
+			</div>
+			<button
+				(click)="virarCard()"
+				[ngClass]="{ on: showBack, off: !showBack }"
+			>
+				<fa-icon
+					[icon]="['fas', 'arrow-right']"
+					size="xl"
+					class="icon"
+				></fa-icon>
+			</button>
+		</div>
 	</div>
-	<div class="card-body">
-		<img src="{{ imgLink }}" alt="{{ alt }}" />
-		<p class="description">
-			{{ description }}
-		</p>
-	</div>
-	<div class="card-bottom">
-		<app-social-button
-			iconType="fas"
-			iconName="link"
-			link="https://alreadykosh.github.io/Pokedex/"
-		></app-social-button>
-		<app-social-button
-			iconType="fab"
-			iconName="github"
-			link="https://github.com/AlreadyKosh/Pokedex"
-		></app-social-button>
+
+	<div class="card-back" [ngClass]="{ on: showBack, off: !showBack }">
+		<div class="card-top">
+			<h5 class="title">
+				<span>{{ "{ " }}</span
+				>Links<span>{{ " }" }}</span>
+			</h5>
+		</div>
+		<div class="card-body">
+			<div class="link">
+				<app-social-button
+					iconType="fas"
+					iconName="link"
+					iconSize="xl"
+					widthComponent="50px"
+					heigthComponent="50px"
+					link="https://www.instagram.com/eusoucarreira/"
+				></app-social-button>
+				<p>Link para a página</p>
+			</div>
+
+			<div class="link">
+				<app-social-button
+					iconType="fab"
+					iconName="github"
+					iconSize="xl"
+					widthComponent="50px"
+					heigthComponent="50px"
+					link="https://www.instagram.com/eusoucarreira/"
+				></app-social-button>
+				<p>Link para o repositório no Github</p>
+			</div>
+		</div>
+		<div class="card-bottom">
+			<button
+				(click)="virarCard()"
+				[ngClass]="{ on: showBack, off: !showBack }"
+			>
+				<fa-icon
+					[icon]="['fas', 'arrow-right']"
+					size="xl"
+					class="icon"
+				></fa-icon>
+			</button>
+		</div>
 	</div>
 </div>

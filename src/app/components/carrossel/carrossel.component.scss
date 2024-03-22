@@ -1,0 +1,51 @@
+.carousel {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+
+	.carousel-container {
+		display: flex;
+		justify-content: center;
+		transition: transform 1s ease-in-out; // Transição suave ao mover os cards
+		animation: moveCardAnimation 1s forwards; // Adiciona a animação de movimento dos cards
+	}
+
+	.carousel-card {
+		flex: 0 0 auto;
+		width: 300px;
+		margin-left: 30px;
+		transition: transform 1s ease-in-out; // Transição suave ao escalar os cards
+	}
+
+	.prev-btn,
+	.next-btn {
+		position: absolute;
+		top: 50%;
+		background-color: #333;
+		color: #fff;
+		padding: 10px 20px;
+		border: none;
+		cursor: pointer;
+		z-index: 1; /* Coloca os botões acima dos cards */
+	}
+
+	.prev-btn {
+		left: 10px;
+	}
+
+	.next-btn {
+		right: 10px;
+	}
+}
+
+.rtl-animation {
+	transition: transform 1s ease-in-out;
+}
+
+.rtl-next {
+	transform: translateX(-100%);
+}
+
+.rtl-prev {
+	transform: translateX(100%);
+}

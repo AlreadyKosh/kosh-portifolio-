@@ -1,3 +1,7 @@
-<a class="social-item" [href]="link">
-	<fa-icon [icon]="[iconType, iconName]" size="lg"></fa-icon>
+<a
+	class="social-item"
+	[href]="link"
+	[ngStyle]="{ width: widthComponent, height: heigthComponent }"
+>
+	<fa-icon [icon]="[iconType, iconName]" [size]="iconSize"></fa-icon>
 </a>

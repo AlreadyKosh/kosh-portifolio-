@@ -4,46 +4,164 @@
 .card {
 	display: flex;
 	width: 100%;
-	height: 100%;
+	height: 450px;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	border: 3px solid $primary;
 	border-radius: 30px;
 	background-color: $black;
+	padding: 15px 20px 15px 20px;
 
-	.card-top {
+	&.on {
+		transform: rotateY(
+			180deg
+		); // Vira o cartão quando o mouse passa sobre ele
+		transition: transform 1s ease-in-out;
+	}
+
+	&.off {
+		transform: rotateY(
+			0deg
+		); // Vira o cartão quando o mouse passa sobre ele
+		transition: transform 1s ease-in-out;
+	}
+
+	.card-front,
+	.card-back {
 		display: flex;
-		justify-content: center;
-		margin: 16px 0 0 0;
-		text-align: center;
-		.title {
-			font-size: 20px;
-			span {
-				color: $primary;
+		flex-direction: column;
+
+		.card-top {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 42px;
+			width: 100%;
+
+			.title {
+				font-size: 20px;
+				span {
+					color: $primary;
+				}
 			}
 		}
 	}
 
-	.card-body {
-		padding: 20px;
-		text-align: center;
+	.card-front {
+		align-items: center;
 
-		img {
-			width: 90%;
-			border-radius: 20px;
-		}
-		.description {
-			margin-top: 10px;
+		&.on {
+			flex-direction: column;
+			clip-path: inset(0 0 0px 0);
+			height: auto;
+			opacity: 1;
+			transition: 1.5s ease-out;
 		}
 
-		.stacks {
+		&.off {
+			opacity: 0;
+			height: 0;
+			clip-path: inset(0 0 500px 0);
+		}
+
+		.card-body {
+			height: 294px;
+			width: 100%;
+			text-align: center;
+			margin: 20px 0 20px 0;
+
+			img {
+				width: 100%;
+				height: 200px;
+				border-radius: 20px;
+			}
+
+			.description {
+				height: 90px;
+				margin-top: 10px;
+				overflow-y: auto;
+			}
+		}
+
+		.card-bottom {
 			display: flex;
+			align-items: center;
+			height: 42px;
+			width: 100%;
+			justify-content: space-between;
+
+			.icon {
+				color: $primary;
+				margin-left: 10px;
+			}
+
+			button {
+				display: flex;
+				align-items: center;
+				width: 40px;
+				height: 40px;
+				border: 2px solid $primary;
+				border-radius: 50%;
+				background-color: $black;
+				color: $white;
+			}
 		}
 	}
 
-	.card-bottom {
-		display: flex;
-		margin-bottom: 16px;
+	.card-back {
+		transform: rotateY(180deg);
+		align-items: baseline;
+
+		&.on {
+			clip-path: inset(0 0 0px 0);
+			height: auto;
+			opacity: 1;
+			transition: 1.5s ease-out;
+		}
+
+		&.off {
+			height: 0;
+			opacity: 0;
+			clip-path: inset(0 0 350px 0);
+			transition: 1.5s ease-out;
+		}
+
+		.card-body {
+			margin: 20px 0;
+			height: 294px;
+
+			.link {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin: 0 0 10px 0;
+			}
+
+			p {
+				font-size: 15px;
+				margin-left: 5px;
+			}
+		}
+
+		.card-bottom {
+			float: right;
+			height: 42px;
+			width: 100%;
+
+			.icon {
+				color: $primary;
+				margin-left: 10px;
+			}
+
+			button {
+				display: flex;
+				align-items: center;
+				width: 40px;
+				height: 40px;
+				border: 2px solid $primary;
+				border-radius: 50%;
+				background-color: $black;
+				color: $white;
+			}
+		}
 	}
 }
