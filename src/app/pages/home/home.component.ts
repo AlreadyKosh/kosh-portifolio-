@@ -7,6 +7,7 @@ import { CardComponent } from '../../components/card/card.component';
 import { ProjetoCardComponent } from '../../components/projeto-card/projeto-card.component';
 import { CarouselComponent } from '../../components/carousel/carousel.component';
 import { CarrosselComponent } from '../../components/carrossel/carrossel.component';
+import { CarrosselKeenComponent } from '../../components/carrossel-keen/carrossel-keen.component';
 
 @Component({
 	selector: 'app-home',
@@ -19,6 +20,7 @@ import { CarrosselComponent } from '../../components/carrossel/carrossel.compone
 		ProjetoCardComponent,
 		CarouselComponent,
 		CarrosselComponent,
+		CarrosselKeenComponent,
 	],
 	templateUrl: './home.component.html',
 	styleUrl: './home.component.scss',

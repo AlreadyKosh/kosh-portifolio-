@@ -25,6 +25,7 @@ import {
 	faBars,
 	faLink,
 	faArrowRight,
+	faArrowLeft,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -52,7 +53,8 @@ export class AppComponent {
 			faJs,
 			faNode,
 			faLink,
-			faArrowRight
+			faArrowRight,
+			faArrowLeft
 		);
 	}
 }

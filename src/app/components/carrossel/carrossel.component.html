@@ -3,17 +3,37 @@
 		<div
 			class="carousel-card"
 			*ngFor="let card of visibleCards; let i = index"
-			[ngClass]="{ 'rtl-next': nextClicked, 'rtl-prev': prevClicked }"
+			[ngClass]="{
+				'rtl-next': nextClicked,
+				'rtl-prev': prevClicked,
+			}"
 		>
 			<app-projeto-card
 				[imgLink]="card.imgLink"
 				[alt]="card.alt"
 				[label]="card.label"
 				[description]="card.description"
-				[ngClass]="{ active: i === activeIndex }"
 			></app-projeto-card>
 		</div>
 	</div>
-	<button (click)="prev()" class="prev-btn">Prev</button>
-	<button (click)="next()" class="next-btn">Next</button>
+	<div class="buttons">
+		<button (click)="prev()" class="prev-btn">
+			<fa-icon
+				[icon]="['fas', 'arrow-left']"
+				size="lg"
+				class="icon"
+			></fa-icon>
+		</button>
+		<p>
+			<span>{{ "{ " }}</span
+			>{{ startIndex + 1 }} of {{ cards.length }}<span>{{ " }" }}</span>
+		</p>
+		<button (click)="next()" class="next-btn">
+			<fa-icon
+				[icon]="['fas', 'arrow-right']"
+				size="lg"
+				class="icon"
+			></fa-icon>
+		</button>
+	</div>
 </div>

@@ -1,3 +1,6 @@
+@import "../../styles/break-points.scss";
+@import "../../styles/variables.scss";
+
 .carousel {
 	position: relative;
 	overflow: hidden;
@@ -6,44 +9,52 @@
 	.carousel-container {
 		display: flex;
 		justify-content: center;
-		transition: transform 1s ease-in-out; // Transição suave ao mover os cards
-		animation: moveCardAnimation 1s forwards; // Adiciona a animação de movimento dos cards
+
+		.carousel-card {
+			width: 300px;
+		}
 	}
 
-	.carousel-card {
-		flex: 0 0 auto;
-		width: 300px;
-		margin-left: 30px;
-		transition: transform 1s ease-in-out; // Transição suave ao escalar os cards
+	.buttons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 20px 0 0 0;
+
+		.icon,
+		span {
+			color: $primary;
+		}
+
+		.prev-btn,
+		.next-btn {
+			background-color: transparent;
+			color: #fff;
+			padding: 10px 10px;
+			border: 1px solid $primary;
+			border-radius: 50%;
+			cursor: pointer;
+			z-index: 1;
+		}
+
+		.prev-btn {
+			left: 10px;
+		}
+
+		.next-btn {
+			right: 10px;
+		}
 	}
 
-	.prev-btn,
-	.next-btn {
-		position: absolute;
-		top: 50%;
-		background-color: #333;
-		color: #fff;
-		padding: 10px 20px;
-		border: none;
-		cursor: pointer;
-		z-index: 1; /* Coloca os botões acima dos cards */
+	@include laptop {
+		.carousel-container {
+			justify-content: space-between;
+		}
 	}
-
-	.prev-btn {
-		left: 10px;
-	}
-
-	.next-btn {
-		right: 10px;
-	}
-}
-
-.rtl-animation {
-	transition: transform 1s ease-in-out;
 }
 
 .rtl-next {
-	transform: translateX(-100%);
+	transform: translateX(-250%);
 }
 
 .rtl-prev {
