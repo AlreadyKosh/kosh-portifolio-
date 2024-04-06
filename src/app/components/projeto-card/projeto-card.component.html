@@ -14,22 +14,18 @@
 		</div>
 		<div class="card-bottom">
 			<div class="card-icons">
-				<fa-icon
-					[icon]="['fab', 'html5']"
-					size="xl"
-					class="icon"
-				></fa-icon>
-				<fa-icon
-					[icon]="['fab', 'css3-alt']"
-					size="xl"
-					class="icon"
-				></fa-icon>
-				<fa-icon
-					[icon]="['fab', 'js']"
-					size="xl"
-					class="icon"
-				></fa-icon>
+				<div class="icon" *ngFor="let icon of icons">
+					<app-my-icon
+						[type]="icon.type"
+						[name]="icon.name"
+						[prefix]="icon.prefix"
+						[size]="icon.size"
+						[iconClass]="'projetoCardIcon'"
+					>
+					</app-my-icon>
+				</div>
 			</div>
+
 			<button
 				(click)="virarCard()"
 				[ngClass]="{ on: showBack, off: !showBack }"

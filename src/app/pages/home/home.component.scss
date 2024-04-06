@@ -32,8 +32,6 @@
 
 			.sub-info {
 				color: $white;
-
-				margin-top: -5px;
 				font-size: 22px;
 			}
 
@@ -88,15 +86,8 @@
 			text-align: center;
 
 			.img-about {
-				vertical-align: middle;
-				margin-bottom: 1.5rem !important;
-				padding: 0.25rem;
-				background-color: $primary;
-				border: 1px solid $primary;
-				border-radius: 0.25rem;
-				max-width: 100%;
-				height: auto;
 			}
+
 			.title {
 				font-size: 25px;
 				color: $white;
@@ -119,6 +110,17 @@
 
 			@include desktop {
 				flex-direction: row;
+
+				.img-about {
+					vertical-align: middle;
+					margin-bottom: 1.5rem !important;
+					padding: 0.25rem;
+					background-color: $primary;
+					border: 1px solid $primary;
+					border-radius: 0.25rem;
+					max-width: 100%;
+					height: auto;
+				}
 			}
 		}
 	}
@@ -138,25 +140,31 @@
 			margin-bottom: 24px;
 			text-align: center;
 		}
-		.skills-title {
-			color: $white;
-			font-size: 20px;
-			margin-bottom: 15px;
-			text-align: center;
 
-			span {
-				color: $primary;
+		.frontend,
+		.backend {
+			margin-bottom: 30px;
+		}
+
+		.frontend,
+		.backend,
+		.databases {
+			.skills-title {
+				color: $white;
+				font-size: 20px;
+				margin-bottom: 15px;
+				text-align: center;
+
+				span {
+					color: $primary;
+				}
 			}
-		}
 
-		.frontend {
-			margin-bottom: 25px;
-		}
-
-		.cards {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			gap: 10px;
+			.cards {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 10px;
+			}
 		}
 	}
 }

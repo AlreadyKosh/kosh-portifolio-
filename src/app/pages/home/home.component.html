@@ -11,8 +11,8 @@
 				>Douglas Carreira<span>{{ "}" }}</span>
 			</h6>
 			<p class="sub-info">
-				E sou um desenvolvedor fullstack a procura de uma oportunidade,
-				seja bem-vindo ao meu portifolio!!
+				Sou um desenvolvedor fullstack e tambem tenho um brecho online
+				com minha namorada.
 			</p>
 			<div class="buttons">
 				<app-button
@@ -47,7 +47,10 @@
 			</div>
 		</div>
 		<div class="img-header">
-			<img src="assets/img/perfildog.jpg" alt="Foto Ilustrativa" />
+			<img
+				src="../../../assets/img/perfildog.jpg"
+				alt="Foto Ilustrativa"
+			/>
 		</div>
 	</div>
 </header>
@@ -56,7 +59,11 @@
 <section id="about" class="section-about">
 	<div class="container">
 		<div class="about">
-			<img src="assets/img/perfildog.jpg" alt="" class="img-about" />
+			<img
+				src="../../../assets/img/perfildog.jpg"
+				alt="Foto minha"
+				class="img-about"
+			/>
 
 			<div class="pl-md-4 col-md-9">
 				<h6 class="title">
@@ -109,39 +116,97 @@
 				>Front-End<span>{{ " }" }}</span>
 			</h6>
 			<div class="cards">
-				<app-card iconName="angular" label="Angular"></app-card>
-				<app-card iconName="react" label="React"></app-card>
-				<app-card iconName="html5" label="HTML"></app-card>
-				<app-card iconName="css3-alt" label="CSS"></app-card>
-				<app-card iconName="sass" label="Sass"></app-card>
-				<app-card iconName="bootstrap" label="Bootstrap"></app-card>
+				<app-card
+					iconPrefix="fab"
+					iconName="angular"
+					label="Angular"
+				></app-card>
+				<app-card
+					iconPrefix="fab"
+					iconName="react"
+					label="React"
+				></app-card>
+				<app-card
+					iconPrefix="fab"
+					iconName="html5"
+					label="HTML"
+				></app-card>
+				<app-card
+					iconPrefix="fab"
+					iconName="css3-alt"
+					label="CSS"
+				></app-card>
+				<app-card
+					iconPrefix="fab"
+					iconName="sass"
+					label="Sass"
+				></app-card>
+				<app-card
+					iconPrefix="fab"
+					iconName="bootstrap"
+					label="Bootstrap"
+				></app-card>
 			</div>
 		</div>
-		<div class="Back-End">
+		<div class="backend">
 			<h6 class="skills-title">
 				<span>{{ "{ " }}</span
 				>Back-End<span>{{ " }" }}</span>
 			</h6>
 			<div class="cards">
-				<app-card iconName="js" label="Javascript"></app-card>
 				<app-card
-					[iconType]="false"
-					iconLink="../../assets/icon/icon-typescript.svg"
+					iconPrefix="fab"
+					iconName="js"
+					label="Javascript"
+				></app-card>
+				<app-card
+					iconType="asset"
+					iconName="icon-typescript"
 					label="Typescript"
 					alt="Icone da Linguagem Typescript"
 				></app-card>
-				<app-card iconName="node" label="Node"></app-card>
 				<app-card
-					iconLink="../../assets/icon/icon-c-sharp-logo.svg"
-					label="C#"
-					alt="Icone da Linguagem C#"
-					[iconType]="false"
+					iconPrefix="fab"
+					iconName="node"
+					label="Node"
 				></app-card>
 				<app-card
-					iconLink="../../assets/icon/icon-ruby-on-rails-64.svg"
+					iconType="asset"
+					iconName="icon-c-sharp-logo"
+					label="C#"
+					alt="Icone da Linguagem C#"
+				></app-card>
+				<app-card
+					iconType="asset"
+					iconName="icon-ruby-on-rails-64"
 					label="Ruby on Rails"
 					alt="Icone do framework Ruby on Rails"
-					[iconType]="false"
+				></app-card>
+			</div>
+		</div>
+		<div class="databases">
+			<h6 class="skills-title">
+				<span>{{ "{ " }}</span
+				>Databases<span>{{ " }" }}</span>
+			</h6>
+			<div class="cards">
+				<app-card
+					iconType="asset"
+					iconName="icon-mysql-logo"
+					label="MySQL"
+					alt="Icone do Banco de Dados MySQL"
+				></app-card>
+				<app-card
+					iconType="asset"
+					iconName="icon-postgresql"
+					label="PostgreSQL"
+					alt="Icone do Banco de Dados Postgres"
+				></app-card>
+				<app-card
+					iconType="asset"
+					iconName="icon-sqlite"
+					label="SQLite"
+					alt="Icone do Banco de Dados SQLite"
 				></app-card>
 			</div>
 		</div>
@@ -165,34 +230,52 @@
 			[cards]="[
 		{
 			imgLink: '../../../assets/img/Pokedex.png',
-			alt: 'Imagem do Projeto Pokedex',
+			alt: 'To do list project image',
 			label: 'To do List',
-			description:'Landing page simulating a Pokédex from the Pokemon anime..',
+			description:'Its a to-do list application where you can create notes to organize your routine.',
+			icons: [
+                { type: 'asset', name: 'icon-typescript', },
+                { type: 'library', name: 'sass', prefix: 'fab', size:'xl' },
+                { type: 'library', name: 'html5', prefix: 'fab', size:'xl' },
+				{ type: 'library', name: 'react', prefix: 'fab', size:'xl' },
+				{ type: 'asset', name: 'icon-mysql-logo', }
+            ]
 		},
 		{
 			imgLink: '../../../assets/img/Pokedex.png',
-			alt: 'Imagem do Projeto Pokedex',
+			alt: 'Pokedex project image',
 			label: 'Pokedex',
 			description:'Landing page simulating a Pokédex from the Pokemon anime.',
+			icons: [
+                { type: 'library', name: 'js', prefix: 'fab', size:'xl'},
+                { type: 'library', name: 'css3-alt', prefix: 'fab', size:'xl' },
+                { type: 'library', name: 'html5', prefix: 'fab', size:'xl' },
+            ]
 		},
 		{
 			imgLink: '../../../assets/img/oticaslobao.png',
-			alt: 'Imagem da landing page do projeto oticas lobão',
+			alt: 'Oticas Lobão Project image',
 			label: 'Oticas Lobão',
 			description:'Landing Page of a fictitious company, used as a study on responsiveness.',
+			icons: [
+				{ type: 'library', name: 'js', prefix: 'fab', size:'xl' },
+                { type: 'library', name: 'css3-alt', prefix: 'fab', size:'xl' },
+                { type: 'library', name: 'html5', prefix: 'fab', size:'xl' },
+				{ type: 'library', name: 'bootstrap', prefix: 'fab', size:'xl' },
+            ]
 		},
 		{
 			imgLink: '../../../assets/img/NIX.png',
-			alt: 'Imagem da landing page do projeto NIX',
+			alt: 'Nix Project Image',
 			label: 'NIX',
 			description:'Landing Page of a fictitious company, used as a study on responsiveness.',
+			icons: [
+				{ type: 'library', name: 'js', prefix: 'fab', size:'xl' },
+                { type: 'library', name: 'css3-alt', prefix: 'fab', size:'xl' },
+                { type: 'library', name: 'html5', prefix: 'fab', size:'xl' },
+            ]
 		},
-		{
-			imgLink: '../../../assets/img/NIX.png',
-			alt: 'Imagem da landing page do projeto NIX',
-			label: 'NIX',
-			description:'Landing Page of a fictitious company, used as a study on responsiveness.',
-		}]"
+		]"
 		></app-carrossel>
 	</div>
 </section>

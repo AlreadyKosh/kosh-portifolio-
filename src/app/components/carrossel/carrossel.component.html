@@ -3,16 +3,14 @@
 		<div
 			class="carousel-card"
 			*ngFor="let card of visibleCards; let i = index"
-			[ngClass]="{
-				'rtl-next': nextClicked,
-				'rtl-prev': prevClicked,
-			}"
+			[ngClass]="{ 'custom-margin': card.marginClass }"
 		>
 			<app-projeto-card
 				[imgLink]="card.imgLink"
 				[alt]="card.alt"
 				[label]="card.label"
 				[description]="card.description"
+				[icons]="card.icons"
 			></app-projeto-card>
 		</div>
 	</div>

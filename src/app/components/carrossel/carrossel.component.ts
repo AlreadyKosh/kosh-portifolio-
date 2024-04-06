@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ProjetoCardComponent } from '../projeto-card/projeto-card.component'; // Importe o componente do projeto
+import { ProjetoCardComponent } from '../projeto-card/projeto-card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
@@ -48,9 +48,28 @@ export class CarrosselComponent implements OnInit {
 		if (screenWidth < 768) {
 			this.numVisibleCards = 1;
 		} else if (screenWidth <= 1024) {
-			this.numVisibleCards = 2;
+			this.numVisibleCards = 3;
 		} else {
 			this.numVisibleCards = 3;
+		}
+
+		if (this.numVisibleCards > 1) {
+			// Calcular o índice do card central
+			const middleIndex = Math.floor(this.numVisibleCards / 2);
+
+			// Adicionar margem aos cards à esquerda e à direita do card central
+			for (let i = 0; i < this.visibleCards.length; i++) {
+				if (i !== middleIndex) {
+					this.visibleCards[i].marginClass = 'custom-margin';
+				} else {
+					this.visibleCards[i].marginClass = '';
+				}
+			}
+		} else {
+			// Remover a classe de margem se houver apenas um card visível
+			for (let i = 0; i < this.visibleCards.length; i++) {
+				this.visibleCards[i].marginClass = '';
+			}
 		}
 
 		this.startIndex = this.activeIndex % this.cards.length;

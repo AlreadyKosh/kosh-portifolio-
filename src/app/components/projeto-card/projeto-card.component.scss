@@ -67,7 +67,7 @@
 			height: 294px;
 			width: 100%;
 			text-align: center;
-			margin: 20px 0 20px 0;
+			margin: 5px 0 20px 0;
 
 			img {
 				width: 100%;
@@ -89,20 +89,26 @@
 			width: 100%;
 			justify-content: space-between;
 
-			.icon {
-				color: $primary;
-				margin-left: 10px;
-			}
-
 			button {
-				display: flex;
-				align-items: center;
 				width: 40px;
 				height: 40px;
 				border: 2px solid $primary;
 				border-radius: 50%;
 				background-color: $black;
 				color: $white;
+
+				.icon {
+					color: $primary;
+				}
+			}
+
+			.card-icons {
+				display: flex;
+
+				.icon {
+					color: $primary;
+					margin-left: 10px;
+				}
 			}
 		}
 	}
@@ -143,7 +149,8 @@
 		}
 
 		.card-bottom {
-			float: right;
+			display: flex;
+			justify-content: end;
 			height: 42px;
 			width: 100%;
 

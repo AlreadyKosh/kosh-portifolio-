@@ -1,0 +1,10 @@
+<ng-container *ngIf="type === 'library'">
+	<fa-icon [icon]="[prefix, name]" [size]="size"></fa-icon>
+</ng-container>
+<ng-container *ngIf="type === 'asset'">
+	<img
+		src="../../../assets/icons/{{ name }}.svg"
+		alt="{{ name }}"
+		[ngClass]="iconClass"
+	/>
+</ng-container>
