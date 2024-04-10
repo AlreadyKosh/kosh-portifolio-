@@ -43,21 +43,21 @@ export class CarrosselComponent implements OnInit {
 	}
 
 	updateVisibleCards(): void {
-		const screenWidth: number = window.innerWidth;
+		if (typeof window !== 'undefined') {
+			const screenWidth: number = window.innerWidth;
 
-		if (screenWidth < 768) {
-			this.numVisibleCards = 1;
-		} else if (screenWidth <= 1024) {
-			this.numVisibleCards = 3;
-		} else {
-			this.numVisibleCards = 3;
+			if (screenWidth < 768) {
+				this.numVisibleCards = 1;
+			} else if (screenWidth <= 1024) {
+				this.numVisibleCards = 3;
+			} else {
+				this.numVisibleCards = 3;
+			}
 		}
 
 		if (this.numVisibleCards > 1) {
-			// Calcular o índice do card central
 			const middleIndex = Math.floor(this.numVisibleCards / 2);
 
-			// Adicionar margem aos cards à esquerda e à direita do card central
 			for (let i = 0; i < this.visibleCards.length; i++) {
 				if (i !== middleIndex) {
 					this.visibleCards[i].marginClass = 'custom-margin';
@@ -66,7 +66,6 @@ export class CarrosselComponent implements OnInit {
 				}
 			}
 		} else {
-			// Remover a classe de margem se houver apenas um card visível
 			for (let i = 0; i < this.visibleCards.length; i++) {
 				this.visibleCards[i].marginClass = '';
 			}

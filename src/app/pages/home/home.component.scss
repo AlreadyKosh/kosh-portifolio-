@@ -2,13 +2,28 @@
 @import "../../styles/variables.scss";
 
 .header {
-	height: 94vh;
+	position: relative;
+	height: 100vh;
 	min-height: 650px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../../../assets/img/50611_Garoto\ jovem\ de\ cabelos\ loiros\ usando\ oculos\ progr_xl-1024-v1-0.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: bottom;
+		z-index: -1;
+		opacity: 0.3;
+	}
 
 	.container {
 		height: 100%;
 		display: flex;
-		padding: 0 15px;
+		padding: $padding-container;
 		align-items: center;
 
 		.infos {
@@ -27,6 +42,25 @@
 
 				span {
 					color: $primary;
+					position: relative;
+				}
+
+				& span::before {
+					content: "";
+					animation: header-title 20s infinite,
+						clip 20s steps(15) infinite;
+					clip-path: inset(0 100% 0 0);
+				}
+
+				& span::after {
+					content: "";
+					position: absolute;
+					height: 100%;
+					width: calc(100% + 18px);
+					border-left: 2px solid $primary;
+					right: -15px;
+					animation: cursor 0.8s infinite,
+						writting 20s steps(15) infinite;
 				}
 			}
 
@@ -49,25 +83,6 @@
 		.img-header {
 			display: none;
 		}
-
-		@include desktop {
-			.img-header {
-				height: 100%;
-				align-self: flex-end;
-				flex-grow: 1;
-				display: flex;
-				align-items: flex-end;
-				padding-left: 0px;
-
-				img {
-					width: 100%;
-					max-width: 620px;
-
-					margin-left: auto;
-					margin-right: -2rem;
-				}
-			}
-		}
 	}
 }
 
@@ -77,16 +92,13 @@
 
 	.container {
 		margin-top: 48px;
-		padding: 0 15px;
+		padding: $padding-container;
 
 		.about {
 			display: flex;
 			flex-direction: column;
 			color: $white;
 			text-align: center;
-
-			.img-about {
-			}
 
 			.title {
 				font-size: 25px;
@@ -132,7 +144,7 @@
 
 	.container {
 		margin-top: 48px;
-		padding: 0 15px;
+		padding: $padding-container;
 
 		.section-title {
 			color: $white;
@@ -175,7 +187,7 @@
 
 	.container {
 		margin-top: 48px;
-		padding: 0 15px;
+		padding: $padding-container;
 
 		.title {
 			color: $white;
@@ -204,7 +216,7 @@ footer {
 	.container {
 		width: 100%;
 		margin-top: 48px;
-		padding: 0 15px;
+		padding: $padding-container;
 
 		.footer-up {
 			display: flex;
@@ -233,5 +245,109 @@ footer {
 				font-size: 14px;
 			}
 		}
+	}
+}
+
+@include desktop {
+	.header {
+		.container {
+			padding: 0 50px;
+
+			.infos {
+				.subtitle {
+					color: $white;
+					margin-bottom: 0;
+					font-size: 25px;
+					font-weight: 500;
+				}
+
+				.title {
+					span {
+					}
+				}
+
+				.sub-info {
+					color: $white;
+					font-size: 22px;
+				}
+
+				.buttons {
+					display: inline-block;
+					margin-top: 16px;
+				}
+
+				.socials {
+					display: flex;
+					margin-top: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
+@keyframes cursor {
+	0% {
+		border-left: 2px solid transparent;
+	}
+}
+@keyframes clip {
+	12.5%,
+	18.75%,
+	37.5%,
+	43.75%,
+	62.5%,
+	68.75%,
+	87.5%,
+	93.75% {
+		clip-path: inset(0 0 0 0);
+	}
+	6.25%,
+	25%,
+	31.25%,
+	50%,
+	56.25%,
+	75%,
+	81.25% {
+		clip-path: inset(0 100% 0 0);
+	}
+}
+@keyframes writting {
+	12.5%,
+	18.75%,
+	37.5%,
+	43.75%,
+	62.5%,
+	68.75%,
+	87.5%,
+	93.75% {
+		width: 0;
+	}
+	6.25%,
+	25%,
+	31.25%,
+	50%,
+	56.25%,
+	75%,
+	81.25% {
+		width: calc(100% + 18px);
+	}
+}
+
+@keyframes header-title {
+	0%,
+	25% {
+		content: "Douglas Carreira";
+	}
+	26%,
+	50% {
+		content: "Kosh";
+	}
+	51%,
+	75% {
+		content: "Koshinho";
+	}
+	76%,
+	100% {
+		content: "AlreadyKosh";
 	}
 }

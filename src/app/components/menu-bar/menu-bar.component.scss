@@ -1,4 +1,5 @@
 @import "../../styles/break-points.scss";
+@import "../../styles/variables.scss";
 
 .menu-container {
 	z-index: 10;
@@ -8,7 +9,8 @@
 	height: 8vh;
 	width: 100%;
 	justify-content: space-around;
-	background-color: #161616;
+	background-color: $primaryBlack;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 
 	button {
 		background-color: transparent;
@@ -30,9 +32,9 @@
 		list-style: none;
 		position: absolute;
 		width: 100%;
-		top: 8vh;
+		top: 7vh;
 		height: 35vh;
-		background-color: #161616;
+		background-color: $primaryBlack;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
