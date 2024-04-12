@@ -8,36 +8,18 @@
 
 	<ul [class.open]="isOpen" class="nav-list">
 		<li class="nav-item">
-			<a class="nav-link" href="#home">Home</a>
+			<a class="nav-link" (click)="scrollToSection('home')">Home</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="#about">Sobre mim</a>
+			<a class="nav-link" (click)="scrollToSection('about')">Sobre mim</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="#service">Skills</a>
+			<a class="nav-link" (click)="scrollToSection('skills')">Skills</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="#portfolio">Projetos</a>
+			<a class="nav-link" (click)="scrollToSection('projects')"
+				>Projetos</a
+			>
 		</li>
 	</ul>
 </nav>
-
-<div class="mobile-menu">
-	<ul [class.open]="isOpen" class="nav-list">
-		<li class="nav-item">
-			<a class="nav-link" href="#home">Home</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#about">Sobre mim</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#service">Projetos</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#portfolio">Portfolio</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#blog">Blog</a>
-		</li>
-	</ul>
-</div>
